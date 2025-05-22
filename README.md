@@ -37,6 +37,8 @@ This demo shows how to dynamically load a Razor Class Library (RCL) into a Photi
 ## License
 
 MIT License
+This demo project is inspired by [Photino.Blazor](https://github.com/tryphotino/photino.Blazor).
+Photino.Blazor is licensed under the Apache 2.0 license.
 
 ---
 **注意事項**
@@ -76,3 +78,5 @@ MIT License
 ## ライセンス
 
 MIT License
+このデモプロジェクトは、[Photino.Blazor](https://github.com/tryphotino/photino.Blazor) から着想を得ています。
+Photino.BlazorはApache2.0ライセンスでライセンスされています。
