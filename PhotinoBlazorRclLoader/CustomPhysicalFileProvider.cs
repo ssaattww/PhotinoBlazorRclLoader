@@ -1,3 +1,6 @@
+// Copyright (c) 2025 ssaattww. All rights reserved.
+// Licensed under the MIT License.
+
 using System;
 using System.IO;
 using System.Collections;
