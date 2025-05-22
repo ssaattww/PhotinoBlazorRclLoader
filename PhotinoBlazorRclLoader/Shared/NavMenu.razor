@@ -1,0 +1,66 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">blazor</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </li>
+         @foreach (var folder in rclFolders)
+        {
+            string componentName = Path.GetFileName(folder);
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="@($"/DynamicComponentLoader/{componentName}")">
+                    <span class="oi oi-folder" aria-hidden="true"></span> @componentName
+                </NavLink>
+            </li>
+        }
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private List<string> rclFolders = new();
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            string rclDir = Path.Combine(AppContext.BaseDirectory, "RCL");
+            if (Directory.Exists(rclDir))
+            {
+                rclFolders = Directory.GetDirectories(rclDir).ToList();
+            }
+            else
+            {
+                Console.WriteLine($"RCL directory not found: {rclDir}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error getting RCL folders: {ex.Message}");
+        }
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

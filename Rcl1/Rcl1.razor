@@ -1,0 +1,25 @@
+﻿<img src="@ResourceDir/background.png" class="my-component"/>
+<link href="@ResourceDir/Rcl1.styles.css" rel="stylesheet" />
+
+<h3>動的に読み込まれたコンポーネントです！</h3>
+<p>メッセージ: @Message</p>
+
+@inject IJSRuntime JS
+@using System.Reflection
+@using System.IO
+@code {
+    [Parameter]
+    public string Message { get; set; }
+
+    string ResourceDir{get{return Path.Combine("file://",System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)!, "resource");}} 
+    private IJSObjectReference? module;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import",Path.Combine(ResourceDir,"exampleJsInterop.js"));
+            await module.InvokeVoidAsync("showPrompt", "exampleJsInterop からのメッセージです！");
+        }
+    }
+}
+

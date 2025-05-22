@@ -1,0 +1,75 @@
+@page "/DynamicComponentLoader/{Component}"
+@using System.IO
+@using System.Reflection
+@using Microsoft.AspNetCore.Components
+
+@if (componentType is not null)
+{
+    <DynamicComponent Type="@componentType" Parameters="componentParameters!" />
+}
+else
+{
+    <p>適切なコンポーネントが見つかりませんでした。</p>
+}
+
+@code {
+    [Parameter]
+    public string? Component { get; set; }
+
+    private Type? componentType;
+    private IDictionary<string, object>? componentParameters;
+    private List<Type> availableComponents = new();
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            var baseDir = Path.Combine(AppContext.BaseDirectory, "RCL");
+            var assemblies = Directory.EnumerateFiles(baseDir, "*.dll", SearchOption.AllDirectories)
+                .Select(Assembly.LoadFrom)
+                .ToList();
+            assemblies.ForEach(asm => Console.WriteLine($"見つかったdll:{asm.FullName}"));
+            availableComponents = assemblies
+                 .SelectMany(assembly => assembly.GetTypes())
+                 .Where(type => typeof(ComponentBase).IsAssignableFrom(type) && !type.IsAbstract && type.Name != "_Imports").ToList();
+
+            if (Component != null)
+            {
+                componentType = availableComponents.FirstOrDefault(t => t.Name == Component);
+            }
+
+            if (componentType != null)
+            {
+                string? rclAssetDir = null;
+                try
+                {
+                    string assemblyLocation = componentType.Assembly.Location;
+                    string directoryName = Path.GetDirectoryName(assemblyLocation)!;
+                    rclAssetDir = Path.Combine(directoryName, "resource");
+                }
+                catch (Exception ex)
+                {
+                    Console.Error.WriteLine($"resourceディレクトリの取得に失敗しました: {ex.Message}");
+                }
+
+                componentParameters = new Dictionary<string, object>
+                    {
+                        { "Message", "Photino.Blazor で動的にロードされたコンポーネントです！" }
+                    };
+
+                Console.WriteLine($"コンポーネント {componentType.FullName} をロードしました。");
+            }
+            else
+            {
+                Console.Error.WriteLine($"適切なコンポーネントが見つかりませんでした: Component = {Component}, availableComponents = {string.Join(", ", availableComponents.Select(c => c.Name))}");
+            }
+        }
+        catch (Exception ex)
+        {
+            string errorMessage = $"コンポーネントの自動検出に失敗しました: {ex.Message}\nError: {ex.Message}\nStack Trace: {ex.StackTrace}";
+            Console.Error.WriteLine(errorMessage);
+            componentType = null;
+            componentParameters = null;
+        }
+    }
+}

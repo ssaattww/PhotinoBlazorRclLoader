@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/PhotinoDynamicApp.csproj": {}
+  },
+  "projects": {
+    "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/PhotinoDynamicApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/PhotinoDynamicApp.csproj",
+        "projectName": "PhotinoDynamicApp",
+        "projectPath": "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/PhotinoDynamicApp.csproj",
+        "packagesPath": "/home/ibis/.nuget/packages/",
+        "outputPath": "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/NuGet.config",
+          "/home/ibis/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://pkgs.dev.azure.com/tryphotino/Photino.Native/_packaging/PhotinoPackages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Photino.Blazor": {
+              "target": "Package",
+              "version": "[4.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

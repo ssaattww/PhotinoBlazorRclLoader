@@ -1,0 +1,55 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PhotinoBlazorRclLoader
+build_property.RootNamespace = PhotinoBlazorRclLoader
+build_property.ProjectDir = /home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Pages/DynamicComponentLoader.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRHluYW1pY0NvbXBvbmVudExvYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ibis/dotnet_ws/PhotinoDynamic/PhotinoBlazorRclLoader/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

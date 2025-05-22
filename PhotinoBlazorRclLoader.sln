@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcl1", "Rcl1\Rcl1.csproj", "{93C92F5A-3CDB-4218-8436-B10F6C2D2569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotinoDynamicApp", "PhotinoDynamicApp\PhotinoDynamicApp.csproj", "{A911B09E-17F2-49A5-9D4E-3204C67E4044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93C92F5A-3CDB-4218-8436-B10F6C2D2569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C92F5A-3CDB-4218-8436-B10F6C2D2569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C92F5A-3CDB-4218-8436-B10F6C2D2569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C92F5A-3CDB-4218-8436-B10F6C2D2569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A911B09E-17F2-49A5-9D4E-3204C67E4044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A911B09E-17F2-49A5-9D4E-3204C67E4044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A911B09E-17F2-49A5-9D4E-3204C67E4044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A911B09E-17F2-49A5-9D4E-3204C67E4044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

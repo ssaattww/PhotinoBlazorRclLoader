@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot/background.png" LogicalName="background.png" />
+    <EmbeddedResource Include="wwwroot/exampleJsInterop.js" LogicalName="exampleJsInterop.js" />
+    <!-- <EmbeddedResource Include="wwwroot/Rcl1.razor.css" LogicalName="Rcl1.razor.css" /> -->
+  </ItemGroup>
+
+</Project>

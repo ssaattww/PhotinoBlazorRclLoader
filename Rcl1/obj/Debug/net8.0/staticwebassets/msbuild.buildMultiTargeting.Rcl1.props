@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Rcl1.props" />
+</Project>
