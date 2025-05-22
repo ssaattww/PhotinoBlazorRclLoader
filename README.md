@@ -1,5 +1,14 @@
 # PhotinoBlazorRclLoader Demo
 
+**Important Notes**
+
+*   When creating a directory structure like `Rcl/Rcl1`, the name `Rcl1` must match the name of the RCL library.
+*   `CustomPhysicalFileProvider` is a security-sensitive implementation and should be used with caution.
+    Specifically, it has the following security concerns:
+    *   Using absolute paths: If the input subpath is an absolute path, it is used as is, potentially allowing access to files outside the intended directory.
+    *   Path concatenation: Using `Path.Combine` without proper validation can lead to path traversal vulnerabilities.
+    *   No file change monitoring: The `Watch` method returns `NullChangeToken.Singleton`, disabling file change monitoring.
+
 ## Overview
 
 This demo shows how to dynamically load a Razor Class Library (RCL) into a PhotinoBlazor application.
@@ -30,6 +39,14 @@ This demo shows how to dynamically load a Razor Class Library (RCL) into a Photi
 MIT License
 
 ---
+**注意事項**
+
+*   作成するディレクトリ名（例：Rcl/Rcl1）において、Rcl1の名前はRCLライブラリの名前と一致する必要があります。
+*   `CustomPhysicalFileProvider`はセキュリティ的に問題がある実装なので、注意して使用してください。
+    具体的には、以下のセキュリティ上の懸念があります。
+    *   絶対パスの使用：入力されたサブパスが絶対パスの場合、そのまま使用されるため、意図しないディレクトリ外のファイルにアクセスできる可能性があります。
+    *   パスの連結：適切な検証なしに`Path.Combine`を使用すると、パストラバーサルの脆弱性につながる可能性があります。
+    *   ファイル変更の監視なし：`Watch`メソッドは`NullChangeToken.Singleton`を返すため、ファイル変更の監視が無効になります。
 
 ## 概要
 
